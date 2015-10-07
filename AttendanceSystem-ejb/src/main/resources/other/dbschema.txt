@@ -11,7 +11,8 @@ create table students(
 	soc_sec_no bigint not null, -- social security number to connect with CSN
 	email text not null,
 	phone integer,
-	reg_date date not null -- registration date of the student
+	reg_date date not null, -- registration date of the student
+	image bytea -- Image of the student, may be null.
 );
 
 create table position(
