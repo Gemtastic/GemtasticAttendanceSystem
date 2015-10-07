@@ -1,0 +1,100 @@
+create role app with login password 'abc123';
+
+create database attendance owner app;
+
+\c attendance
+
+create table students(
+	id serial primary key not null,
+	firstname text not null,
+	lastname text not null,
+	soc_sec_no bigint not null, -- social security number to connect with CSN
+	email text not null,
+	phone integer,
+	reg_date date not null -- registration date of the student
+);
+
+create table position(
+	id serial primary key not null,
+	name text not null,
+	unique (name)
+);
+
+create table employees(
+	id serial primary key not null,
+	firstname text not null,
+	lastname text not null,
+	email text not null,
+	phone integer,
+	position integer not null references position,
+	hire_date date not null
+);
+
+create table courses(
+	id serial primary key not null,
+	name text not null,
+	points integer not null,
+	start date not null,	-- Date course starts
+	stop date not null,	-- Date course ends
+	teacher integer not null references employees
+);
+
+create table user_types(
+	id serial primary key not null,
+	name text not null,
+	unique (name)
+);
+
+create table users(
+	id serial primary key not null,
+	username text not null,
+	password text not null,
+	email text not null,
+	type integer not null references user_types,
+	employee integer not null references employees
+);
+
+create table lectures(
+	id serial primary key not null,
+	course integer not null references courses,
+	date date not null,
+	start time not null,	-- time lecture starts
+	stop time not null	-- time lecture ends
+);
+
+create table students_courses(
+	student integer not null references students,
+	course integer not null references courses,
+	unique (student, course)
+);
+
+create table attendance(
+	lecture integer not null references lectures,
+	student integer not null references students,
+	unique (student, lecture)
+);
+
+grant all on attendance to PUBLIC;
+
+grant all on courses to PUBLIC;
+grant all on courses_id_seq to PUBLIC;
+
+grant all on employees to PUBLIC;
+grant all on employees_id_seq to PUBLIC;
+
+grant all on lectures to PUBLIC;
+grant all on lectures_id_seq to PUBLIC;
+
+grant all on position to PUBLIC;
+grant all on position_id_seq to PUBLIC;
+
+grant all on students to PUBLIC;
+grant all on students_id_seq to PUBLIC;
+
+grant all on students_courses to PUBLIC;
+
+grant all on user_types to PUBLIC;
+grant all on user_types_id_seq to PUBLIC;
+
+grant all on users to PUBLIC;
+grant all on users_id_seq to PUBLIC;
