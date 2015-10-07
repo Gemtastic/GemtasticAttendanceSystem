@@ -1,0 +1,20 @@
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+/Gemtastic Attendance System-ejb/build/
+/Gemtastic Attendance System-ejb/dist/
+/Gemtastic Attendance System-war/build/
+/build/
+/Gemtastic Attendance System-war/dist/
+/AttendanceSystem-ejb/target/
+/AttendanceSystem-web/target/
+/AttendanceSystem-ear/target/

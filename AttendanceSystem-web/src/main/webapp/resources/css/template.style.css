@@ -1,0 +1,52 @@
+/* 
+    Created on : Sep 27, 2015, 1:54:30 PM
+    Author     : Gemtastic
+*/
+
+#wrapper, body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    margin: 0;
+    background-color: #cccccc;
+}
+
+#header {
+    max-width: 60em;
+    margin: auto;
+    height: 10em;
+}
+
+#menuWrapper {
+    width: 100%;
+    background-color: #333333;
+    height: 3em;
+    box-shadow: inset 0 1em 1.5em -1em #000,
+        inset 0 -1em 1.5em -1em #000,
+        0 0em 1em 0.5em rgba(229,229,229,0.8);
+
+}
+
+#content {
+    max-width: 60em;
+    background-color: #e5e5e5;
+    margin-bottom: 5em;
+    margin: auto;
+}
+
+#footer {
+    width: 100%;
+    position: fixed;
+    bottom: 1em;
+}
+
+#footerContent {
+    color: #ffffff;
+    margin: auto;
+    background-color: #999999;
+    width: 90%;
+    padding: 1em;
+    text-align: center;
+}
