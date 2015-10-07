@@ -99,3 +99,15 @@ grant all on user_types_id_seq to PUBLIC;
 
 grant all on users to PUBLIC;
 grant all on users_id_seq to PUBLIC;
+
+insert into position (name) 
+values ('headmaster');
+
+insert into employees(firstname, lastname, email, position, hire_date) 
+values ('Head', 'master', 'master@school.com', 1, '2015-08-01');
+
+insert into user_types (name)
+values ('admin');
+
+insert into users (username, password, email, type, employee)
+values ('admin', 'admin', 'admin@school.com', 1, 1);
