@@ -9,13 +9,10 @@ import com.gemtastic.attendancesystem.services.CRUDservices.LectureEJBService;
 import com.gemtastic.attendencesystem.enteties.Courses;
 import com.gemtastic.attendencesystem.enteties.Employees;
 import com.gemtastic.attendencesystem.enteties.Lectures;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
-import org.primefaces.event.SelectEvent;
 
 /**
  *
@@ -45,6 +42,7 @@ public class LectureMB {
     private LectureEJBService lEJB;
     
     public List<Lectures> lectures = lEJB.findAll();
+    public List<Lectures> attendance = 
 //    
 //    public Lectures lecture = new Lectures();
 //    
