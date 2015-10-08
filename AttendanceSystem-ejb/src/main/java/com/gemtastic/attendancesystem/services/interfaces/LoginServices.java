@@ -5,21 +5,13 @@
  */
 package com.gemtastic.attendancesystem.services.interfaces;
 
-import java.util.List;
-
 /**
- * Interface for performing CRUD on database entity.
- * 
+ *
  * @author Gemtastic
- * @param <T>
  */
-public interface CRUDService<T> {
+public interface LoginServices {
     
-    public T readOne(T t);
+    public boolean verify(String username, String password);
     
-    public List<T> findAll();
-    
-    public void delete(T t);
-    
-    public T upsert(T t);
+    public String hash(String password);
 }
