@@ -42,7 +42,7 @@ public class LectureMB {
     private LectureEJBService lEJB;
     
     public List<Lectures> lectures = lEJB.findAll();
-    public List<Lectures> attendance = 
+    public List<Lectures> attendance;
 //    
 //    public Lectures lecture = new Lectures();
 //    
