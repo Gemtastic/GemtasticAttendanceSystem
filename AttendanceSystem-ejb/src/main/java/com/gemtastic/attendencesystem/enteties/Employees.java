@@ -192,7 +192,7 @@ public class Employees implements Serializable {
 
     @Override
     public String toString() {
-        return "com.gemtastic.Employees[ id=" + id + " ]";
+        return "com.gemtastic.attendencesystem.enteties.Employees[ id=" + id + " ]";
     }
     
 }

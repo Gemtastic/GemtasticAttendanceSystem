@@ -14,6 +14,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -75,6 +76,9 @@ public class Students implements Serializable {
     @Column(name = "reg_date")
     @Temporal(TemporalType.DATE)
     private Date regDate;
+    @Lob
+    @Column(name = "images")
+    private byte[] images;
     @ManyToMany(mappedBy = "studentsList")
     private List<Courses> coursesList;
     @ManyToMany(mappedBy = "studentsList")
@@ -152,6 +156,14 @@ public class Students implements Serializable {
         this.regDate = regDate;
     }
 
+    public byte[] getImages() {
+        return images;
+    }
+
+    public void setImages(byte[] images) {
+        this.images = images;
+    }
+
     @XmlTransient
     public List<Courses> getCoursesList() {
         return coursesList;
@@ -192,7 +204,7 @@ public class Students implements Serializable {
 
     @Override
     public String toString() {
-        return "com.gemtastic.Students[ id=" + id + " ]";
+        return "com.gemtastic.attendencesystem.enteties.Students[ id=" + id + " ]";
     }
     
 }

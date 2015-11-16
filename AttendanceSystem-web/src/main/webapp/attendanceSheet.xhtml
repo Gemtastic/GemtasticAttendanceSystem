@@ -11,17 +11,17 @@ and open the template in the editor.
     <h:head>
         <h:outputStylesheet library="css" name="attendanceSheet.style.css"/>
     </h:head>
-    <body>
-        <!--<ui:composition>-->
+    <h:body>
+        <ui:composition>
         <h:form>
             <div id="dates" class="rotated">
-                <ui:repeat value="" var="date">
+                <ui:repeat value="#{lecture.studentList}" var="date">
                     <div class="styling date">
-                        #{date}
+                        Hi #{date.firstname}
                     </div>
                 </ui:repeat> 
             </div>
         </h:form>
-        <!--</ui:composition>-->
-    </body>
+        </ui:composition>
+    </h:body>
 </html>

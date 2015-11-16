@@ -61,7 +61,7 @@ public class TestCruds {
     public void tearDown() {
     }
 
-    @Test
+//    @Test
     public void testCRUD() throws Exception {
 
         Map<String, Object> properties = new HashMap<>();

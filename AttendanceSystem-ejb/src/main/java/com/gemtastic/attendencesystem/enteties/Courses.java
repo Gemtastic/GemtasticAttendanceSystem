@@ -8,7 +8,6 @@ package com.gemtastic.attendencesystem.enteties;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
-import javax.ejb.Local;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -185,7 +184,7 @@ public class Courses implements Serializable {
 
     @Override
     public String toString() {
-        return "com.gemtastic.Courses[ id=" + id + " ]";
+        return "com.gemtastic.attendencesystem.enteties.Courses[ id=" + id + " ]";
     }
     
 }

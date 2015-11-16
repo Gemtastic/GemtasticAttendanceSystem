@@ -25,11 +25,6 @@ import javax.persistence.Query;
 @Stateless
 @LocalBean
 public class UserSession {
-    @Resource(mappedName = "jms/NotificationQueue")
-    private Queue notificationQueue;
-    @Inject
-    @JMSConnectionFactory("java:comp/DefaultJMSConnectionFactory")
-    private JMSContext context;
     
     @PersistenceContext
     EntityManager em;
@@ -51,10 +46,4 @@ public class UserSession {
     public Users update(Users user) {
         return em.merge(user);
     }
-
-    private void sendJMSMessageToNotificationQueue(String messageData) {
-        context.createProducer().send(notificationQueue, messageData);
-    }
-    
-    
 }

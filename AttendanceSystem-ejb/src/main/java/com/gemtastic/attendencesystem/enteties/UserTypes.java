@@ -108,7 +108,7 @@ public class UserTypes implements Serializable {
 
     @Override
     public String toString() {
-        return "com.gemtastic.UserTypes[ id=" + id + " ]";
+        return "com.gemtastic.attendencesystem.enteties.UserTypes[ id=" + id + " ]";
     }
     
 }

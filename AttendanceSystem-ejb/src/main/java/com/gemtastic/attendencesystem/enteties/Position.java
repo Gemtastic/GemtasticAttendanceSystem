@@ -108,7 +108,7 @@ public class Position implements Serializable {
 
     @Override
     public String toString() {
-        return "com.gemtastic.Position[ id=" + id + " ]";
+        return "com.gemtastic.attendencesystem.enteties.Position[ id=" + id + " ]";
     }
     
 }

@@ -148,7 +148,7 @@ public class Users implements Serializable {
 
     @Override
     public String toString() {
-        return "com.gemtastic.Users[ id=" + id + " ]";
+        return "com.gemtastic.attendencesystem.enteties.Users[ id=" + id + " ]";
     }
     
 }

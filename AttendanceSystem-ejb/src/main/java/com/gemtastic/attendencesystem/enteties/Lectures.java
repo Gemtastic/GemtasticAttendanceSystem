@@ -156,7 +156,7 @@ public class Lectures implements Serializable {
 
     @Override
     public String toString() {
-        return "com.gemtastic.Lectures[ id=" + id + " ]";
+        return "com.gemtastic.attendencesystem.enteties.Lectures[ id=" + id + " ]";
     }
     
 }
