@@ -16,8 +16,7 @@ import javax.faces.event.ActionEvent;
  *
  * @author Gemtastic
  */
-@ManagedBean(name = "course")
-@RequestScoped
+@ManagedBean(name="course")
 public class CourseMB {
     
     @EJB
@@ -31,9 +30,13 @@ public class CourseMB {
     public String teacher;
     
     public void onSubmit(ActionEvent event){
-        
+        System.out.println("You submitted it!");
     }
 
+    public CourseMB() {
+    }
+
+    
     public int getId() {
         return id;
     }

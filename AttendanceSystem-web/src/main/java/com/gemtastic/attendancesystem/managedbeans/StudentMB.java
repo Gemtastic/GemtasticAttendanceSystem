@@ -50,6 +50,11 @@ public class StudentMB {
         s.setImages(file.getContents());
         sEJB.upsert(s);
     }
+
+    public StudentMB() {
+    }
+    
+    
     
     public UploadedFile getFile() {
         return file;
