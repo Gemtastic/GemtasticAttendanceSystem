@@ -37,6 +37,7 @@ public class LectureMB {
     
     @EJB
     private LectureEJBService lEJB;
+    
     @EJB
     private StudentEJBService sEJB;
     

@@ -5,11 +5,9 @@
  */
 package com.gemtastic.attendancesystem.services.CRUDservices;
 
-import com.gemtastic.attendancesystem.services.interfaces.CRUDService;
-import com.gemtastic.attendencesystem.enteties.Employees;
+import com.gemtastic.attendancesystem.services.CRUDservices.interfaces.LocalPositionEJBService;
 import com.gemtastic.attendencesystem.enteties.Position;
 import java.util.List;
-import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -20,8 +18,7 @@ import javax.persistence.TypedQuery;
  * @author Gemtastic
  */
 @Stateless
-@LocalBean
-public class PositionEJBService implements CRUDService<Position>{
+public class PositionEJBService implements LocalPositionEJBService {
 
     @PersistenceContext
     private EntityManager em;

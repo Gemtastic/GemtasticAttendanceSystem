@@ -5,7 +5,7 @@
  */
 package com.gemtastic.attendancesystem.services.CRUDservices;
 
-import com.gemtastic.attendancesystem.services.interfaces.CRUDService;
+import com.gemtastic.attendancesystem.services.CRUDservices.interfaces.LocalLectureEJBService;
 import com.gemtastic.attendencesystem.enteties.Courses;
 import com.gemtastic.attendencesystem.enteties.Employees;
 import com.gemtastic.attendencesystem.enteties.Lectures;
@@ -13,7 +13,6 @@ import java.sql.Date;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -24,8 +23,7 @@ import javax.persistence.TypedQuery;
  * @author Gemtastic
  */
 @Stateless
-@LocalBean
-public class LectureEJBService implements CRUDService<Lectures> {
+public class LectureEJBService implements LocalLectureEJBService {
     
     @PersistenceContext
     private EntityManager em;

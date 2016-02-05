@@ -5,10 +5,13 @@
  */
 package com.gemtastic.attendancesystem.services.interfaces;
 
+import javax.ejb.Local;
+
 /**
  *
  * @author Gemtastic
  */
+@Local
 public interface LoginServices {
     
     public boolean verify(String username, String password);

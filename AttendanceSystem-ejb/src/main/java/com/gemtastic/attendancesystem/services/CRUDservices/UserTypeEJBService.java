@@ -5,10 +5,9 @@
  */
 package com.gemtastic.attendancesystem.services.CRUDservices;
 
-import com.gemtastic.attendancesystem.services.interfaces.CRUDService;
+import com.gemtastic.attendancesystem.services.CRUDservices.interfaces.LocalUserTypeEJBService;
 import com.gemtastic.attendencesystem.enteties.UserTypes;
 import java.util.List;
-import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -19,8 +18,7 @@ import javax.persistence.TypedQuery;
  * @author Gemtastic
  */
 @Stateless
-@LocalBean
-public class UserTypeEJBService implements CRUDService<UserTypes> {
+public class UserTypeEJBService implements LocalUserTypeEJBService {
 
     @PersistenceContext
     EntityManager em;

@@ -5,7 +5,7 @@
  */
 package com.gemtastic.attendancesystem.services.CRUDservices;
 
-import com.gemtastic.attendancesystem.services.interfaces.CRUDService;
+import com.gemtastic.attendancesystem.services.CRUDservices.interfaces.LocalStudentEJBService;
 import com.gemtastic.attendencesystem.enteties.Students;
 import java.util.List;
 import javax.ejb.Stateless;
@@ -19,7 +19,7 @@ import javax.persistence.TypedQuery;
  * @author Gemtastic
  */
 @Stateless
-public class StudentEJBService implements CRUDService<Students> {
+public class StudentEJBService implements LocalStudentEJBService {
 
     @PersistenceContext
     private EntityManager em;
