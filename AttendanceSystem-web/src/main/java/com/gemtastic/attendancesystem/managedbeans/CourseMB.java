@@ -5,22 +5,21 @@
  */
 package com.gemtastic.attendancesystem.managedbeans;
 
-import com.gemtastic.attendancesystem.services.CRUDservices.CourseEJBService;
 import java.util.Date;
-import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
 import javax.faces.event.ActionEvent;
 
 /**
  *
  * @author Gemtastic
  */
-@ManagedBean(name="course")
+@ManagedBean
+@SessionScoped
 public class CourseMB {
     
-    @EJB
-    CourseEJBService cEJB;
+    //@EJB
+    //CourseEJBService cEJB;
     
     public int id;
     public String name;

@@ -17,7 +17,7 @@ and open the template in the editor.
                 <f:validateLength maximum="30" />
             </p:inputText><br/>
             
-            <p:outputLabel for="lastname" value="Last name:" /><br/>
+<!--            <p:outputLabel for="lastname" value="Last name:" /><br/>
             <p:inputText id="lastname" value="#{student.lastname}" required="true" requiredMessage="You must enter a last name!">
                 <f:validateLength maximum="30" />
             </p:inputText><br/>
@@ -35,7 +35,7 @@ and open the template in the editor.
             
             <p:outputLabel for="image" value="Image:" /><br/>
             <p:growl id="messages" showDetail="true" />
-            <p:fileUpload id="image" value="#{student.file}" mode="simple" fileLimit="1" allowTypes="*.jpg;*.png;*.gif;" /><br/>
+            <p:fileUpload id="image" value="#{student.file}" mode="simple" fileLimit="1" allowTypes="*.jpg;*.png;*.gif;" /><br/>-->
             <br/>
             <p:commandButton value="Submit" ajax="false" actionListener="#{student.onSubmit}" />
         </h:form>

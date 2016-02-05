@@ -49,10 +49,11 @@ create table user_types(
 create table users(
 	id serial primary key not null,
 	username text not null,
-	password text not null,
-	email text not null,
-	type integer not null references user_types,
-	employee integer not null references employees
+	failedlogins integer not null,
+        lastFail date not null,
+        lastLogin date,
+	email text,
+	type integer not null references user_types
 );
 
 create table lectures(
@@ -75,7 +76,31 @@ create table attendance(
 	unique (student, lecture)
 );
 
+create table login (
+        username text primary key not null,
+        password text not null
+);
+
+create table groups (
+        username text primary key not null,
+        groupname text not null
+);
+
+
+create table message (
+        id serial primary key not null,
+        author text not null,
+        message text not null
+);
+
 grant all on attendance to PUBLIC;
+
+grant all on login to PUBLIC;
+
+grant all on groups to PUBLIC;
+
+grant all on message to PUBLIC;
+grant all on message_id_seq to PUBLIC;
 
 grant all on courses to PUBLIC;
 grant all on courses_id_seq to PUBLIC;

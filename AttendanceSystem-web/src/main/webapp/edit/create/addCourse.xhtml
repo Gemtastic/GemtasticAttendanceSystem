@@ -15,21 +15,21 @@ and open the template in the editor.
             
             <h2>Create a new Course</h2>
             <p:outputLabel for="name" value="Course name:" /> <br/>
-            <p:inputText id="name" value="#{course.name}" required="true" requiredMessage="You must enter a name!">
+            <p:inputText id="name" value="#{CourseMB.name}" required="true" requiredMessage="You must enter a name!">
                 <f:validateLength maximum="30" />
             </p:inputText><br/>
             
             <p:outputLabel for="points" value="Phone:" /><br/>
-            <p:spinner id="points" value="#{course.points}" /><br/>
+            <p:spinner id="points" value="#{CourseMB.points}" /><br/>
             
             <p:outputLabel for="start" value="Course start date:" /><br/>
-            <p:calendar id="start" value="#{course.start}" /><br/>
+            <p:calendar id="start" value="#{CourseMB.start}" /><br/>
             
             <p:outputLabel for="stop" value="Course stop date:" /><br/>
-            <p:calendar id="stop" value="#{course.stop}" />
+            <p:calendar id="stop" value="#{CourseMB.stop}" />
             
             <br/>
-            <p:commandButton value="Submit" ajax="false" actionListener="#{course.onSubmit}" />
+            <p:commandButton value="Submit" ajax="false" actionListener="#{CourseMB.onSubmit}" />
         </h:form>
     </h:body>
 </html>
